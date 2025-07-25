@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Recruitment System</title>
+  <link rel="stylesheet" href="camp.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Campus Recruitment System</h1>
+      <nav>
+        <ul>
+          <li><a href="#login">Login</a></li>
+          <li><a href="#student-registration">Student Registration</a></li>
+          <li><a href="#company-registration">Company Registration</a></li>
+          <li><a href="#view-applications">View Applications</a></li>
+          <li><a href="#matchmaking">Student-Company Matching</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Login Section -->
+    <section id="login">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" required />
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" required />
+        <button type="submit">Login</button>
+        <p id="loginMessage"></p>
+      </form>
+    </section>
+
+    <!-- Student Registration -->
+    <section id="student-registration">
+      <h2>Student Registration</h2>
+      <form id="studentForm" style="display:none;">
+        <label for="studentName">Name:</label>
+        <input type="text" id="studentName" required />
+        <label for="studentEmail">Email:</label>
+        <input type="email" id="studentEmail" required />
+        <label for="studentSkills">Skills (comma separated):</label>
+        <input type="text" id="studentSkills" required />
+        <button type="submit">Register</button>
+      </form>
+      <p id="studentMessage"></p>
+    </section>
+
+    <!-- Company Registration -->
+    <section id="company-registration">
+      <h2>Company Registration</h2>
+      <form id="companyForm" style="display:none;">
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" required />
+        <label for="jobPosition">Job Position:</label>
+        <input type="text" id="jobPosition" required />
+        <label for="jobSkills">Required Skills (comma separated):</label>
+        <input type="text" id="jobSkills" required />
+        <button type="submit">Post Job</button>
+      </form>
+      <p id="companyMessage"></p>
+    </section>
+
+    <!-- View Applications -->
+    <section id="view-applications">
+      <h2>View Applications</h2>
+      <div id="applications"></div>
+    </section>
+
+    <!-- Matching -->
+    <section id="matchmaking">
+      <h2>Student-Company Matching</h2>
+      <button id="matchButton" style="display:none;">Match Students with Companies</button>
+      <div id="matchResults"></div>
+    </section>
+  </div>
+
+  <script src="camp.js"></script>
+</body>
+</html>
